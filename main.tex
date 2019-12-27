@@ -1,0 +1,71 @@
+\documentclass[12pt,oneside]{book}
+
+%-------------------------------
+% How to use this template:
+% 1. Add the details about your dissertation in the INFORMATION section below
+% 2. Place packages and custom commands in formatting/custom.tex
+% 4. Write your abstract in special-pages/abstract.tex
+% 5. Place references in references.bib
+% 6. Each chapter should be a separate .tex file in the ./chapters directory. 
+%    Be sure to \input{} your new chapters in the CHAPTERS section below
+% 7. Place figures in the ./figures directory
+% 8. Write your acknowledgements in special-pages/acknowledgements.tex (optional)
+%
+% Author: Blair J. Rossetti
+% Last Modified: 2019-04-02
+% This template is heavily based on a template by Mckenzie Rachel West
+%-------------------------------
+
+% INFORMATION - used throughout template
+\newcommand{\mytitle}{Witty catchphrase: Length-enhanced superlative verbiage with prolixity in/of/for obscure topic few people care about}
+\newcommand{\myname}{Blair J. Rossetti}
+\newcommand{\mypreviousdegrees}{
+	B.A., Wheaton College, MA, 2009\\
+	M.Sc., Emory University, GA, 2018
+}
+\newcommand{\mydegree}{Doctor of Philosophy} % your degree is either Doctor of Philosophy or Master of Arts/Science/Development Practice or another area
+\newcommand{\mydoctype}{dissertation} % "dissertation" for doctoral degree and "thesis" for master's degree
+\newcommand{\mydepartment}{Computer Science and Informatics}
+\newcommand{\advisor}{Peter Venkman, Ph.D.}
+\newcommand{\committeeOne}{Erin Gilbert, Ph.D.} % list in alphabetical order
+\newcommand{\committeeTwo}{Abby Yates, Ph.D.} % list in alphabetical order
+\newcommand{\mydean}{Lisa A. Tedesco, Ph.D.}
+\newcommand{\myyear}{2019}
+
+% FORMATTING
+\usepackage{formatting/emory}
+\input{formatting/custom.tex} % place packages and custom commands here
+
+% DOCUMENT
+\begin{document}
+\pagestyle{empty} % no page numbers on special pages
+\input{special-pages/distribution-agreement.tex}
+\input{special-pages/approval-sheet.tex}
+\input{special-pages/abstract-cover-page.tex}
+\input{special-pages/abstract.tex} % place abstract here
+\input{special-pages/cover-page.tex}
+\input{special-pages/acknowledgments.tex} % optional, comment to remove
+
+% TABLE OF CONTENTS/LIST OF FIGURES/LIST OF TABLES/LIST OF ALGORITHMS
+\frontmatter
+\tableofcontents
+\listoffigures % required if figures are included in text
+\listoftables % required if tables are included in text
+\listofalgorithms % required if algorithms are included in text
+
+% CHAPTERS
+\pagestyle{myheadings}
+\mainmatter
+\input{chapters/ch1}
+\input{chapters/ch2}
+\input{chapters/ch3}
+\appendix
+\input{chapters/appendix}
+
+% BIBLIOGRAPHY
+\backmatter
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

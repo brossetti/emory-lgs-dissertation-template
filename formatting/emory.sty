@@ -1,0 +1,15 @@
+% All materials (except page numbers) must be within 1" margins. 
+% For legacy reasons, we keep a 1.5" left margin.
+\usepackage[margin=1in,left=1.5in]{geometry}
+
+% All but the Distribution Agreement and the Abstract must be double spaced.
+\usepackage[doublespacing]{setspace}
+
+% Place page numbers in the top-right corner (may be in the margin)
+\let\ps@plain\ps@myheadings
+
+% Format appendix labels in TOC
+\usepackage[titletoc]{appendix}
+
+% Required for list of algorithms unless algorithm2e is loaded in custom.tex
+% \usepackage{algorithm}
